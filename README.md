@@ -67,4 +67,4 @@ Proyek ini terbuka untuk pengembangan lebih lanjut! Jika Anda memiliki ide untuk
 
 ---
 
-**Dibuat oleh:** [Nama atau Username GitHub Anda]
+**Dibuat oleh:** [Sesya & Dinda]
