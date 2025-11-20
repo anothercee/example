@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Efficiency Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Efficiency Hub</h1>
+    </header>
+
+    <main class="app-content">
+        <section id="modul-mindmap" class="modul active">
+            <h2>🧠 Mind Map Cepat</h2>
+            <div id="mindmap-container">
+                <p>Ketik poin utama dan tekan Tab/Enter untuk membuat node.</p>
+                <input type="text" id="mindmap-input" placeholder="Tulis ide utama...">
+                <button onclick="addNode()">Tambah Node</button>
+            </div>
+        </section>
+
+        <section id="modul-converter" class="modul hidden">
+            <h2>🧮 Custom Converter Hub</h2>
+            <div>
+                <label for="hex-input">HEX Code:</label>
+                <input type="text" id="hex-input" placeholder="#FFFFFF">
+                <button onclick="convertColor()">Konversi ke RGB</button>
+                <p id="rgb-output">RGB: -</p>
+            </div>
+        </section>
+
+        <section id="modul-tracker" class="modul hidden">
+            <h2>✅ Daily Check-In Tracker</h2>
+            <div id="tracker-list">
+                <div class="task-item" id="task-utama" onclick="toggleTask('task-utama')">
+                    <i class="far fa-circle"></i> Tugas Utama Selesai
+                </div>
+                <div class="task-item" id="task-air" onclick="toggleTask('task-air')">
+                    <i class="far fa-circle"></i> Minum Air Cukup
+                </div>
+            </div>
+            <button onclick="resetDailyTracker()">Reset Harian</button>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button onclick="showModul('modul-mindmap')" data-modul="modul-mindmap" class="nav-item active">
+            <i class="fas fa-brain"></i>
+            <span>Mind Map</span>
+        </button>
+        <button onclick="showModul('modul-converter')" data-modul="modul-converter" class="nav-item">
+            <i class="fas fa-calculator"></i>
+            <span>Konverter</span>
+        </button>
+        <button onclick="showModul('modul-tracker')" data-modul="modul-tracker" class="nav-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Harian</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
